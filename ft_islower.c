@@ -6,7 +6,7 @@
 /*   By: mbouzaie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/10 15:32:17 by mbouzaie          #+#    #+#             */
-/*   Updated: 2018/12/10 15:34:57 by mbouzaie         ###   ########.fr       */
+/*   Updated: 2019/01/15 16:28:20 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_islower(int c)
 {
-	if ((unsigned char)c < 'a' || (unsigned char)c > 'z')
+	if (c < 'a' || c > 'z')
 		return (0);
 	return (1);
 }

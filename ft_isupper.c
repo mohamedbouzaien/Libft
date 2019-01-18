@@ -6,7 +6,7 @@
 /*   By: mbouzaie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/10 15:21:18 by mbouzaie          #+#    #+#             */
-/*   Updated: 2018/12/10 15:28:22 by mbouzaie         ###   ########.fr       */
+/*   Updated: 2019/01/15 16:28:02 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_isupper(int c)
 {
-	if ((unsigned char)c < 'A' || (unsigned char)c > 'Z')
+	if (c < 'A' || c > 'Z')
 		return (0);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: mbouzaie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/10 15:52:14 by mbouzaie          #+#    #+#             */
-/*   Updated: 2018/12/10 15:54:34 by mbouzaie         ###   ########.fr       */
+/*   Updated: 2019/01/15 16:29:08 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_isdigit(int c)
 {
-	if ((unsigned char)c < '0' || (unsigned char)c > '9')
+	if (c < '0' || c > '9')
 		return (0);
 	return (1);
 }
