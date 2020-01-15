@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/10 15:21:18 by mbouzaie          #+#    #+#             */
-/*   Updated: 2019/12/15 23:40:18 by mbouzaie         ###   ########.fr       */
+/*   Created: 2019/11/13 15:03:33 by mbouzaie          #+#    #+#             */
+/*   Updated: 2020/01/09 00:32:14 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isupper(int c)
+#include "libft.h"
+
+size_t		ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if (c < 'A' || c > 'Z')
-		return (0);
-	return (1);
+	size_t	i;
+
+	if (size != 0)
+	{
+		i = 0;
+		while ((i < size - 1) && (src[i] != '\0'))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	return (ft_strlen(src));
 }

@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/10 15:21:18 by mbouzaie          #+#    #+#             */
-/*   Updated: 2019/12/15 23:40:18 by mbouzaie         ###   ########.fr       */
+/*   Created: 2019/01/03 17:40:24 by mbouzaie          #+#    #+#             */
+/*   Updated: 2020/01/09 02:56:17 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isupper(int c)
+#include "libft.h"
+
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (c < 'A' || c > 'Z')
-		return (0);
-	return (1);
+	t_list	*old_elem;
+
+	while (*lst)
+	{
+		del((*lst)->content);
+		old_elem = *lst;
+		*lst = old_elem->next;
+		free(old_elem);
+	}
+	*lst = NULL;
 }

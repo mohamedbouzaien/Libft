@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/10 15:21:18 by mbouzaie          #+#    #+#             */
-/*   Updated: 2019/12/15 23:40:18 by mbouzaie         ###   ########.fr       */
+/*   Created: 2020/01/05 22:42:53 by mbouzaie          #+#    #+#             */
+/*   Updated: 2020/01/09 00:36:18 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isupper(int c)
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (c < 'A' || c > 'Z')
-		return (0);
-	return (1);
+	if (!lst)
+		return (NULL);
+	if (!lst->next)
+		return (lst);
+	return (ft_lstlast(lst->next));
 }

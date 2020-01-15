@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/10 15:21:18 by mbouzaie          #+#    #+#             */
-/*   Updated: 2019/12/15 23:40:18 by mbouzaie         ###   ########.fr       */
+/*   Created: 2020/01/05 22:26:21 by mbouzaie          #+#    #+#             */
+/*   Updated: 2020/01/09 00:35:37 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isupper(int c)
+#include "libft.h"
+
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	if (c < 'A' || c > 'Z')
-		return (0);
-	return (1);
+	t_list	*temp;
+
+	if (alst && new)
+	{
+		if (*alst)
+		{
+			temp = *alst;
+			while (temp->next)
+			{
+				temp = temp->next;
+			}
+			temp->next = new;
+		}
+		else
+		{
+			*alst = new;
+		}
+	}
 }

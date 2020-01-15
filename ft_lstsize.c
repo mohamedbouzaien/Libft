@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/10 15:21:18 by mbouzaie          #+#    #+#             */
-/*   Updated: 2019/12/15 23:40:18 by mbouzaie         ###   ########.fr       */
+/*   Created: 2020/01/05 22:30:39 by mbouzaie          #+#    #+#             */
+/*   Updated: 2020/01/09 00:32:43 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isupper(int c)
+#include "libft.h"
+
+int		ft_lstsize(t_list *lst)
 {
-	if (c < 'A' || c > 'Z')
-		return (0);
-	return (1);
+	int		size;
+	t_list	*temp;
+
+	temp = lst;
+	size = 0;
+	while (temp)
+	{
+		size++;
+		temp = temp->next;
+	}
+	return (size);
 }

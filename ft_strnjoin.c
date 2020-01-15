@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_strnjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/10 15:21:18 by mbouzaie          #+#    #+#             */
-/*   Updated: 2019/12/15 23:40:18 by mbouzaie         ###   ########.fr       */
+/*   Created: 2020/01/09 00:01:23 by mbouzaie          #+#    #+#             */
+/*   Updated: 2020/01/09 00:29:04 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isupper(int c)
+#include "libft.h"
+
+char			*ft_strnjoin(const char *s1, const char *s2, size_t len)
 {
-	if (c < 'A' || c > 'Z')
-		return (0);
-	return (1);
+	char	*s;
+	char	*ret;
+
+	if (!(s = ft_strnew(ft_strlen(s1) + len)))
+		return (NULL);
+	ret = s;
+	while (s1 && *s1)
+		*s++ = *s1++;
+	while (*s2 && s2 && len--)
+		*s++ = *s2++;
+	return (ret);
 }

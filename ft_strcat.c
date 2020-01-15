@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouzaie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 16:39:18 by mbouzaie          #+#    #+#             */
-/*   Updated: 2018/12/05 17:01:45 by mbouzaie         ###   ########.fr       */
+/*   Updated: 2019/12/15 23:57:46 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strcat(char *s1, const char *s2)
 {

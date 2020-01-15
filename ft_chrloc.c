@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_chrloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/10 15:21:18 by mbouzaie          #+#    #+#             */
-/*   Updated: 2019/12/15 23:40:18 by mbouzaie         ###   ########.fr       */
+/*   Created: 2020/01/09 00:03:44 by mbouzaie          #+#    #+#             */
+/*   Updated: 2020/01/09 00:37:20 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isupper(int c)
+#include "libft.h"
+
+int				ft_chrloc(char *str, int ch)
 {
-	if (c < 'A' || c > 'Z')
-		return (0);
-	return (1);
+	size_t		length;
+
+	length = 0;
+	if (str)
+	{
+		while (str[length] != ch && str[length] != '\0')
+			length++;
+	}
+	return (length);
 }

@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouzaie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/10 15:32:17 by mbouzaie          #+#    #+#             */
-/*   Updated: 2019/01/15 16:28:20 by mbouzaie         ###   ########.fr       */
+/*   Updated: 2019/12/15 23:39:58 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_islower(int c)
 {
