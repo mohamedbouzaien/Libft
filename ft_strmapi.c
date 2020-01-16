@@ -6,7 +6,7 @@
 /*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/21 21:41:02 by mbouzaie          #+#    #+#             */
-/*   Updated: 2020/01/15 22:50:34 by mbouzaie         ###   ########.fr       */
+/*   Updated: 2020/01/16 01:18:06 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	if (!(tmp = ft_strnew(ft_strlen(s))))
+	if (!(tmp = (char *)malloc(ft_strlen(s) + 1)))
 		return (NULL);
 	i = 0;
 	while (*s)
@@ -28,5 +28,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 		s++;
 	}
+	tmp[i] = '\0';
 	return (tmp);
 }

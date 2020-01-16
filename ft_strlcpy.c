@@ -6,7 +6,7 @@
 /*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 15:03:33 by mbouzaie          #+#    #+#             */
-/*   Updated: 2020/01/09 00:32:14 by mbouzaie         ###   ########.fr       */
+/*   Updated: 2020/01/15 23:14:40 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
-	if (size != 0)
+	if (size != 0 && dst && src)
 	{
 		i = 0;
 		while ((i < size - 1) && (src[i] != '\0'))

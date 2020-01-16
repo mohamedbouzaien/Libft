@@ -6,11 +6,33 @@
 /*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 20:27:13 by mbouzaie          #+#    #+#             */
-/*   Updated: 2020/01/05 21:04:31 by mbouzaie         ###   ########.fr       */
+/*   Updated: 2020/01/16 01:10:39 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int		ft_intlength(int n)
+{
+	int len;
+
+	len = 0;
+	if (n == -2147483648)
+		return (11);
+	if (n == 0)
+		return (1);
+	if (n < 0)
+	{
+		len = 1;
+		n = -n;
+	}
+	while (n > 0)
+	{
+		len++;
+		n /= 10;
+	}
+	return (len);
+}
 
 char	*ft_itoa(int n)
 {
@@ -21,9 +43,9 @@ char	*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	if (n == 0)
 		return (ft_strdup("0"));
-	if (!(ito = ft_strnew(ft_intlen(n))))
+	if (!(ito = (char *)malloc(ft_intlength(n) + 1)))
 		return (NULL);
-	i = ft_intlen(n) - 1;
+	i = ft_intlength(n) - 1;
 	ito[i + 1] = '\0';
 	if (n < 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: mbouzaie <mbouzaie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/10 21:59:46 by mbouzaie          #+#    #+#             */
-/*   Updated: 2020/01/05 21:26:04 by mbouzaie         ###   ########.fr       */
+/*   Updated: 2020/01/16 01:08:02 by mbouzaie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ char			**ft_split(char const *s, char c)
 		while (*s == c && *s != '\0')
 			s++;
 		w[i] = ft_substr((const char *)s, 0, ft_wordlen((const char *)s, c));
+		if (w[i] == NULL)
+			return (NULL);
 		s = s + ft_wordlen((const char *)s, c);
 		i++;
 		words--;
